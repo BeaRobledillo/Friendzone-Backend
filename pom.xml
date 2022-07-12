@@ -79,14 +79,12 @@
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
         </dependency>
-    </dependencies>
-    <dependencies>
-    <dependency>
+        <dependency>
         <groupId>io.jsonwebtoken</groupId>
         <artifactId>jjwt</artifactId>
         <version>0.9.1</version>
-    </dependency>
-    <dependency>
+        </dependency>
+    </dependencies>
 
     <build>
         <plugins>

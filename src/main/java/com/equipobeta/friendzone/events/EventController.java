@@ -1,9 +1,7 @@
 package com.equipobeta.friendzone.events;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -18,6 +16,15 @@ public class EventController {
     @GetMapping("/api/allevents")
     public List<Event> getall(){
         return service.getAllEvents();
+    }
+
+    @PutMapping("/api/update/")
+    public String update(@RequestBody Event e){
+
+//        service.getProductById(p.getId());
+        service.update(e);
+
+        return "redirect:/api/allevents";
     }
 
 }

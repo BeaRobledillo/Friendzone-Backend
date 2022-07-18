@@ -17,4 +17,8 @@ public class EventService {
         return eventRepository.findAll();
     }
 
+    public Event createEvent(Event event) {
+        return eventRepository.save(event);
+    }
+
 }

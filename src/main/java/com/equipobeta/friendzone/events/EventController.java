@@ -1,9 +1,9 @@
 package com.equipobeta.friendzone.events;
 
+import com.equipobeta.friendzone.users.User;
+import com.equipobeta.friendzone.users.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -12,12 +12,31 @@ import java.util.List;
 
 public class EventController {
 
+    private final UserService userService;
+    private final EventService eventService;
+
     @Autowired
     EventService service;
+
+    public EventController(UserService userService, EventService eventService) {
+        this.userService = userService;
+        this.eventService = eventService;
+    }
 
     @GetMapping("/api/allevents")
     public List<Event> getall(){
         return service.getAllEvents();
     }
+
+    @PostMapping("/api/createevent")
+    public Event addEvent(@RequestBody Event event) {
+        User authUser = userService.findById(1L);
+
+        event.setUser(authUser);
+
+        return eventService.createEvent(event);
+    }
+
+
 
 }

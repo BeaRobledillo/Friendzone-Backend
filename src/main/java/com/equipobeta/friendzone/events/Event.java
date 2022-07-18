@@ -34,11 +34,11 @@ public class Event implements Serializable{
     private String image;
 
     @ManyToMany(mappedBy = "events")
-    private Collection <User> users;
+    private Collection <User> members;
 
     @ManyToOne
     @JoinColumn(name="user_id, nulleable=false")
-    private User user;
+    private User owner;
 
 
     public Event(){

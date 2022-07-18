@@ -57,7 +57,7 @@ public class EventController {
     public Event addEvent(@RequestBody Event event) {
         User authUser = userService.findById(1L);
 
-        event.setUser(authUser);
+        event.setOwner(authUser);
 
         return eventService.createEvent(event);
     }

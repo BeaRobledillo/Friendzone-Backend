@@ -47,10 +47,11 @@ public class EventController {
     //borrar un evento por id
 
     @GetMapping("/api/delete/{id}")
-    public String delete(@PathVariable("id") Long id){
+    public String delete(@PathVariable("id") Long id) {
 
         service.deleteById(id);
-
+        return "redirect:/api/allevents";
+    }
 
     @PostMapping("/api/createevent")
     public Event addEvent(@RequestBody Event event) {

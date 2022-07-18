@@ -10,9 +10,9 @@ public class EventService {
     private final EventRepository eventRepository;
 
 
-    public EventService(EventRepository eventRepository){
+    public EventService(EventRepository eventRepository) {
 
-        this.eventRepository=eventRepository;
+        this.eventRepository = eventRepository;
 
     }
 
@@ -21,19 +21,21 @@ public class EventService {
     }
 
 
-    public void deleteById(Long id){
-        eventRepository.deleteById(id);
+    public void deleteById(Long id) {
+        eventRepository.deleteById(id); }
 
 
-    public Event createEvent(Event event) {
+        public Event createEvent (Event event){
 
-        return eventRepository.save(event);
+            return eventRepository.save(event);
 
+        }
+
+        public Event update (Event event){
+
+            return eventRepository.save(event);
+
+        }
     }
 
-    public Event update (Event event){
 
-        return eventRepository.save(event);
-
-    }
-}

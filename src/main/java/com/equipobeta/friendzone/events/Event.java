@@ -36,6 +36,10 @@ public class Event implements Serializable{
     @ManyToMany(mappedBy = "events")
     private Collection <User> users;
 
+    @ManyToOne
+    @JoinColumn(name="user_id, nulleable=false")
+    private User user;
+
     public Event(){
 
     }

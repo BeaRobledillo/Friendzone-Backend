@@ -8,6 +8,8 @@ import javax.persistence.*;
 import java.io.Serial;
 import java.io.Serializable;
 import java.util.Collection;
+import java.util.Set;
+
 
 @Entity
 
@@ -34,6 +36,10 @@ public class User implements Serializable {
             inverseJoinColumns = @JoinColumn(
                     name = "event_id"))
     private Collection <Event> events;
+
+    @OneToMany(mappedBy = "user")
+    private Set<Event> event;
+
 
 
     public User() {

@@ -10,6 +10,7 @@ public class EventService {
     private final EventRepository eventRepository;
 
     public EventService(EventRepository eventRepository){
+
         this.eventRepository=eventRepository;
     }
 
@@ -17,4 +18,7 @@ public class EventService {
         return eventRepository.findAll();
     }
 
+    public void deleteById(Long id){
+        eventRepository.deleteById(id);
+    }
 }

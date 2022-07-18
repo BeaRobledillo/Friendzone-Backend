@@ -28,6 +28,7 @@ public class EventController {
         return service.getAllEvents();
     }
 
+
     @PostMapping("/api/createevent")
     public Event addEvent(@RequestBody Event event) {
         User authUser = userService.findById(1L);
@@ -38,5 +39,15 @@ public class EventController {
     }
 
 
+
+
+    @PutMapping("/api/update/")
+    public String update(@RequestBody Event e){
+
+//        service.getProductById(p.getId());
+        service.update(e);
+
+        return "redirect:/api/allevents";
+    }
 
 }

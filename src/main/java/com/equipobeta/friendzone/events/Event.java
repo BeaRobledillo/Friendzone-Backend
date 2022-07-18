@@ -40,6 +40,7 @@ public class Event implements Serializable{
     @JoinColumn(name="user_id, nulleable=false")
     private User user;
 
+
     public Event(){
 
     }

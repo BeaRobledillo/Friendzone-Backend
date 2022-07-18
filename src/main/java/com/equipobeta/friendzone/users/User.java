@@ -10,6 +10,7 @@ import java.io.Serializable;
 import java.util.Collection;
 import java.util.Set;
 
+
 @Entity
 
 @Getter
@@ -38,6 +39,7 @@ public class User implements Serializable {
 
     @OneToMany(mappedBy = "user")
     private Set<Event> event;
+
 
 
     public User() {

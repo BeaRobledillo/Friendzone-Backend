@@ -32,7 +32,7 @@ public class User implements Serializable {
     @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JsonIgnore
     @JoinTable(
-            name = "event_users",
+            name = "owner",
             joinColumns = @JoinColumn(
                     name = "user_id"),
             inverseJoinColumns = @JoinColumn(

@@ -53,6 +53,7 @@ public class EventController {
         return "redirect:/api/allevents";
     }
 
+
     @PostMapping("/api/createevent")
     public Event addEvent(@RequestBody Event event) {
         User authUser = userService.findById(1L);

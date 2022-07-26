@@ -34,9 +34,19 @@ public class EventService {
 
         }
 
-        public Event update (Event event){
+        public Event updateEvent (Event event){
+            Event oldEvent = eventRepository.findById(event.getId()).orElseThrow(()->
+                    new RuntimeException("Event not found"));
+            oldEvent.setName(event.getName());
+            oldEvent.setLocation(event.getLocation());
+            oldEvent.setEvent_date(event.getEvent_date());
+            oldEvent.setBudget(event.getBudget());
+            oldEvent.setDescription(event.getDescription());
+            oldEvent.setImage(event.getImage());
+            oldEvent.setHour(event.getHour());
 
-            return eventRepository.save(event);
+
+            return eventRepository.save(oldEvent);
 
         }
 

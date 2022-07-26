@@ -1,5 +1,6 @@
 package com.equipobeta.friendzone.events;
 
+import com.equipobeta.friendzone.exceptions.EventNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -23,7 +24,8 @@ public class EventService {
 
 
     public void deleteById(Long id) {
-        eventRepository.deleteById(id); }
+        eventRepository.deleteById(id);
+    }
 
 
         public Event createEvent (Event event){
@@ -38,9 +40,9 @@ public class EventService {
 
         }
 
-    public Event findById (Long id) {
-        return eventRepository.findById(id).orElse(null);
-    }
+        public Event findById (Long id) {
+            return eventRepository.findById(id).orElseThrow(EventNotFoundException::new);
+        }
 
     }
 

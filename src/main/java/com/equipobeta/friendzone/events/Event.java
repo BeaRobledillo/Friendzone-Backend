@@ -8,6 +8,8 @@ import lombok.Setter;
 import javax.persistence.*;
 import java.io.Serial;
 import java.io.Serializable;
+import java.sql.Date;
+import java.sql.Time;
 import java.text.DateFormat;
 import java.util.Collection;
 
@@ -27,7 +29,8 @@ public class Event implements Serializable{
 
     private Long id;
     private String name;
-    private DateFormat event_date;
+    private Date event_date;
+    private Time hour;
     private String location;
     private float budget;
     private String description;
@@ -45,7 +48,7 @@ public class Event implements Serializable{
 
     }
 
-    public Event(Long id, String name, DateFormat event_date, String location, float budget, String description, String image) {
+    public Event(Long id, String name, Date event_date, String location, float budget, String description, String image, Time hour) {
         this.id = id;
         this.name = name;
         this.event_date = event_date;
@@ -53,14 +56,16 @@ public class Event implements Serializable{
         this.budget = budget;
         this.description = description;
         this.image = image;
+        this.hour = hour;
     }
 
-    public Event(String name, DateFormat event_date, String location, float budget, String description, String image) {
+    public Event(String name, Date event_date, String location, float budget, String description, String image, Time hour) {
         this.name = name;
         this.event_date = event_date;
         this.location = location;
         this.budget = budget;
         this.description = description;
         this.image = image;
+        this.hour = hour;
     }
 }

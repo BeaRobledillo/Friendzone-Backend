@@ -25,11 +25,6 @@ public class EventController {
     private final EventService eventService;
 
 
-    @Autowired
-    EventService service;
-
-
-   
 
     public EventController(UserService userService, EventService eventService) {
         this.userService = userService;
@@ -40,17 +35,17 @@ public class EventController {
      
     @GetMapping("/api/allevents")
     public List<Event> getall(){
-        return service.getAllEvents();
+        return eventService.getAllEvents();
     }
 
 
     //borrar un evento por id
 
-    @GetMapping("/api/delete/{id}")
-    public String delete(@PathVariable("id") Long id) {
-
-        service.deleteById(id);
-        return "redirect:/api/allevents";
+    @DeleteMapping("/api/delete/{id}")
+    public Long delete(@PathVariable("id") Long id) {
+        Event event = eventService.findById(id);
+        eventService.deleteById(id);
+        return id;
     }
 
 
@@ -68,15 +63,11 @@ public class EventController {
         return eventService.findById(id);
     }
 
-
-
-
-
     @PutMapping("/api/update/")
     public String update(@RequestBody Event e){
 
 //        service.getProductById(p.getId());
-        service.update(e);
+        eventService.update(e);
 
 
         return "redirect:/api/allevents";

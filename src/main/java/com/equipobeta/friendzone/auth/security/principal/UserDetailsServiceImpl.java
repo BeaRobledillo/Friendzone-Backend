@@ -1,6 +1,10 @@
 package com.equipobeta.friendzone.auth.security.principal;
 
+import com.equipobeta.friendzone.users.User;
 import com.equipobeta.friendzone.users.UserRepository;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;

@@ -2,7 +2,9 @@ package com.equipobeta.friendzone.auth.api;
 
 import com.equipobeta.friendzone.auth.payload.request.LoginRequest;
 import com.equipobeta.friendzone.auth.payload.request.SignupRequest;
+import com.equipobeta.friendzone.auth.payload.response.JwtResponse;
 import com.equipobeta.friendzone.auth.payload.response.MessageResponse;
+import com.equipobeta.friendzone.auth.role.ERole;
 import com.equipobeta.friendzone.auth.role.Role;
 import com.equipobeta.friendzone.auth.role.RoleRepository;
 import com.equipobeta.friendzone.auth.security.jwt.JwtUtils;
@@ -23,6 +25,7 @@ import javax.validation.Valid;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
@@ -92,22 +95,22 @@ public class AuthController {
             roles.add(userRole);
         } else {
             strRoles.forEach(role -> {
-                switch (role) {
-                    case "admin":
-                        Role adminRole = roleRepository.findByName(ERole.ROLE_ADMIN)
-                                .orElseThrow(() -> new RuntimeException("Error: Role is not found."));
-                        roles.add(adminRole);
+//                switch (role) {
+//                    case "admin":
+//                        Role adminRole = roleRepository.findByName(ERole.ROLE_ADMIN)
+//                                .orElseThrow(() -> new RuntimeException("Error: Role is not found."));
+//                        roles.add(adminRole);
 
-                        break;
-                    default:
+//                        break;
+//                    default:
                         Role userRole = roleRepository.findByName(ERole.ROLE_USER)
                                 .orElseThrow(() -> new RuntimeException("Error: Role is not found."));
                         roles.add(userRole);
-                }
+               // }
             });
         }
 
-        user.setRoles(roles);
+       // user.setRoles(roles);
         userRepository.save(user);
 
         return ResponseEntity.ok(new MessageResponse("User registered successfully!"));

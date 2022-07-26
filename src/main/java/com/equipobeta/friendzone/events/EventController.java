@@ -63,6 +63,12 @@ public class EventController {
         return eventService.createEvent(event);
     }
 
+    @GetMapping("/api/oneevent/{id}")
+    public Event findEventById(@PathVariable Long id) {
+        return eventService.findById(id);
+    }
+
+
 
 
 

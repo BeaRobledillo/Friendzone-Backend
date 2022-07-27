@@ -11,12 +11,13 @@ import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
-public class UserDetailsImpl  implements UserDetails {
+public class UserDetailsImpl implements UserDetails {
 private static final long serialVersionUID = 1L;
 
 private Long id;
 
 private String username;
+private String name;
 
 private String email;
 
@@ -25,9 +26,10 @@ private String password;
 
 private Collection<? extends GrantedAuthority> authorities;
 
-    public UserDetailsImpl(Long id, String username, String email, String password, Collection<? extends GrantedAuthority> authorities) {
+    public UserDetailsImpl(Long id, String username, String name, String email, String password, Collection<? extends GrantedAuthority> authorities) {
         this.id = id;
         this.username = username;
+        this.name = name;
         this.email = email;
         this.password = password;
         this.authorities = authorities;
@@ -41,6 +43,7 @@ private Collection<? extends GrantedAuthority> authorities;
         return new UserDetailsImpl(
                 user.getId(),
                 user.getUsername(),
+                user.getName(),
                 user.getEmail(),
                 user.getPassword(),
                 authorities
@@ -99,4 +102,6 @@ private Collection<? extends GrantedAuthority> authorities;
         UserDetailsImpl user = (UserDetailsImpl) o;
         return Objects.equals(id, user.id);
     }
+
+
 }

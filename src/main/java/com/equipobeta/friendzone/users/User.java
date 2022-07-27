@@ -17,10 +17,8 @@ import java.util.Set;
 
 
 @Entity
-
 @Getter
 @Setter
-
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,6 +26,8 @@ public class User {
     @NotBlank(message = "Username is required")
     @Size(max = 20)
     private String username;
+    @NotBlank(message = "Name is required")
+    @Size(max = 20)
     private String name;
     @NotBlank(message = "Password is required")
     @Size(max = 150)
@@ -61,24 +61,24 @@ public class User {
 
     }
 
-    public User(@NotBlank @Size(min = 3, max = 20) String username, @NotBlank @Size(max = 50) @Email String email, String encode) {
-    }
-
-    public User(Long id, String name, String email, String password, String username) {
+    public User(String username, String name, String password, String email) {
         this.id = id;
-        this.name = name;
-        this.email = email;
-        this.password = password;
         this.username = username;
+        this.name = name;
+        this.password = password;
+        this.email = email;
+        this.roles = roles;
+        this.events = events;
+        this.event = event;
     }
 
-    public User(String name, String email, String password, String username) {
-        this.name = name;
-        this.email = email;
-        this.password = password;
+    public User(String username, String name, String password, String email, Set<Role> roles, Collection<Event> events, Set<Event> event) {
         this.username = username;
+        this.name = name;
+        this.password = password;
+        this.email = email;
+        this.roles = roles;
+        this.events = events;
+        this.event = event;
     }
-
-
-
 }

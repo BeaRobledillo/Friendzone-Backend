@@ -10,8 +10,7 @@ import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
-import java.io.Serial;
-import java.io.Serializable;
+
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
@@ -22,7 +21,7 @@ import java.util.Set;
 @Getter
 @Setter
 
-public class User implements Serializable {
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -58,9 +57,11 @@ public class User implements Serializable {
     @JsonIgnore
     private Set<Event> event;
 
-
-
     public User() {
+
+    }
+
+    public User(@NotBlank @Size(min = 3, max = 20) String username, @NotBlank @Size(max = 50) @Email String email, String encode) {
     }
 
     public User(Long id, String name, String email, String password, String username) {
@@ -77,6 +78,7 @@ public class User implements Serializable {
         this.password = password;
         this.username = username;
     }
+
 
 
 }

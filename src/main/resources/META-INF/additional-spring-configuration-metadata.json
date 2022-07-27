@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "equipobeta.app.jwtSecret",
+      "type": "java.lang.String",
+      "description": "Description for equipobeta.app.jwtSecret."
+  }
+] }

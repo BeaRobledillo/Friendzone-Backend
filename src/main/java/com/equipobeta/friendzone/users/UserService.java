@@ -10,6 +10,6 @@ public class UserService {
     private final UserRepository userRepository;
 
     public User findById (Long id) {
-        return userRepository.findById(id).orElse(null);
+        return (User) userRepository.findById(id).orElse(null);
     }
 }

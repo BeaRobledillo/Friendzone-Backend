@@ -61,24 +61,12 @@ public class User {
 
     }
 
-    public User(String username, String name, String password, String email) {
-        this.id = id;
+    public User(  String username,String name,String email, String password   ) {
         this.username = username;
         this.name = name;
-        this.password = password;
         this.email = email;
-        this.roles = roles;
-        this.events = events;
-        this.event = event;
+        this.password = password;
+
     }
 
-    public User(String username, String name, String password, String email, Set<Role> roles, Collection<Event> events, Set<Event> event) {
-        this.username = username;
-        this.name = name;
-        this.password = password;
-        this.email = email;
-        this.roles = roles;
-        this.events = events;
-        this.event = event;
-    }
 }

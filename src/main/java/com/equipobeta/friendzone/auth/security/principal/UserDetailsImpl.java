@@ -26,12 +26,12 @@ private String password;
 
 private Collection<? extends GrantedAuthority> authorities;
 
-    public UserDetailsImpl(Long id, String username, String email, String password, String name,   Collection<? extends GrantedAuthority> authorities) {
+    public UserDetailsImpl(Long id, String username, String name, String email, String password, Collection<? extends GrantedAuthority> authorities) {
         this.id = id;
         this.username = username;
+        this.name = name;
         this.email = email;
         this.password = password;
-        this.name = name;
         this.authorities = authorities;
     }
 

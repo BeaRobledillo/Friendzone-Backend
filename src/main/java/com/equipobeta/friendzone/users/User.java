@@ -43,8 +43,6 @@ public class User implements Serializable {
     @JsonIgnore
     private Set<Event> event;
 
-
-
     public User() {
     }
 

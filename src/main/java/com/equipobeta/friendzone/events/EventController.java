@@ -64,13 +64,9 @@ public class EventController {
     }
 
     @PutMapping("/api/update/")
-    public String update(@RequestBody Event e){
+    public Event updateEvent(@RequestBody Event event){
 
-//        service.getProductById(p.getId());
-        eventService.update(e);
-
-
-        return "redirect:/api/allevents";
+        return eventService.updateEvent(event);
     }
 
 }

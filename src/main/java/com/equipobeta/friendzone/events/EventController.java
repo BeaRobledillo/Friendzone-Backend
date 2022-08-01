@@ -4,6 +4,7 @@ import com.equipobeta.friendzone.users.User;
 import com.equipobeta.friendzone.users.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -57,6 +58,7 @@ public class EventController {
 
         return eventService.createEvent(event);
     }
+
 
     @GetMapping("/api/oneevent/{id}")
     public Event findEventById(@PathVariable Long id) {

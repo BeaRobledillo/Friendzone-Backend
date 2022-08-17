@@ -1,11 +1,12 @@
 package com.equipobeta.friendzone.users;
 
+import com.equipobeta.friendzone.events.EventRepository;
+import com.equipobeta.friendzone.events.EventService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
-
 import static org.mockito.Mockito.verify;
 
 @ExtendWith(MockitoExtension.class)
@@ -13,22 +14,29 @@ import static org.mockito.Mockito.verify;
 class UsersServiceTest {
 
     @Mock
-    private UsersRepository usersRepositoryMock;
+    private UserRepository userRepository;
+    private UserService underTest;
 
-    private UsersService usersServiceUnderTest;
 
     @BeforeEach
     void setUp() {
-        usersServiceUnderTest = new U(usersRepositoryMock);
+        underTest = new UserService(userRepository);
+    }
+    @Test
+    void findById() {
+        //When
+        User user = new User(
+                1L,
+                "Bea",
+                "bea@gmail.com",
+                "123456",
+                "BeaBootcamp"
+        );
+        //Then
+        userRepository.findById(1L);
+        verify(userRepository).findById(1L);
+
     }
 
-    @Test
-    void () {
-        usersServiceUnderTest.();
-        verify(usersRepositoryMock).();
-    }
 
-    @Test
-    void () {
-    }
 }

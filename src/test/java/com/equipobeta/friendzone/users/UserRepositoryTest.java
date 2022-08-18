@@ -10,35 +10,38 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 
 @WebMvcTest(UserController.class)
-public interface UserRepositoryTest {
-    @SuppressWarnings("SpringJavaAutowiringInspection")
-    MockMvc mockMvc = null;
-
-
-    @Autowired
-    final UserRepository userRepository = null;
-
-
-    @Test
-    default void findById() throws Exception {
-        User user = userRepository.save(new User(
-                1L,
-                "Bea",
-                "bea@gmail.com",
-                "123456",
-                "BeaBootcamp"
-        ));
-        assert false;
-        mockMvc.perform(get("/user/"+user.getId()))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$.id", equalTo(1L)))
-                .andExpect(jsonPath("$.name", equalTo("Bea")))
-                .andExpect(jsonPath("$.email", equalTo("bea@gmail.com")))
-                .andExpect(jsonPath("$.password", equalTo("123456")))
-                .andExpect(jsonPath("$.username", equalTo("BeaBootcamp")));
-
-    }
+public class UserRepositoryTest {
+//    @SuppressWarnings("SpringJavaAutowiringInspection")
+//    MockMvc mockMvc;
+//
+//
+//    @Autowired
+//    final UserRepository userRepository = null;
+//
+//
+//    @Test
+//    void findById() throws Exception {
+//        assert false;
+//        User user = userRepository.save(new User(
+//                1L,
+//                "Bea",
+//                "bea@gmail.com",
+//                "123456",
+//                "BeaBootcamp"
+//        ));
+//        assert false;
+//        mockMvc.perform(get("/user/"+user.getId()))
+//                .andExpect(status().isOk())
+//                .andExpect(jsonPath("$.id", equalTo(1L)))
+//                .andExpect(jsonPath("$.name", equalTo("Bea")))
+//                .andExpect(jsonPath("$.email", equalTo("bea@gmail.com")))
+//                .andExpect(jsonPath("$.password", equalTo("123456")))
+//                .andExpect(jsonPath("$.username", equalTo("BeaBootcamp")));
+//
+//    }
 
 
 
 }
+
+

@@ -50,7 +50,12 @@ public class EventController {
     }
 
 
-    @PostMapping("/api/createevent")
+
+//    public String userAccess() {
+//        return "User Content.";
+//    }
+@PostMapping("/api/createevent")
+@PreAuthorize("hasRole('USER') or hasRole('ADMIN')")
     public Event addEvent(@RequestBody Event event) {
         User authUser = userService.findById(1L);
 
@@ -61,6 +66,7 @@ public class EventController {
 
 
     @GetMapping("/api/oneevent/{id}")
+    @PreAuthorize("hasRole('USER') or hasRole('ADMIN')")
     public Event findEventById(@PathVariable Long id) {
         return eventService.findById(id);
     }

@@ -1,7 +1,4 @@
 package com.equipobeta.friendzone.users;
-
-import com.equipobeta.friendzone.events.EventRepository;
-import com.equipobeta.friendzone.events.EventService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -11,7 +8,7 @@ import static org.mockito.Mockito.verify;
 
 @ExtendWith(MockitoExtension.class)
 
-class UsersServiceTest {
+class UserServiceTest {
 
     @Mock
     private UserRepository userRepository;

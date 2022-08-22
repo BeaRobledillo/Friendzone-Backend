@@ -4,6 +4,7 @@ import com.equipobeta.friendzone.users.User;
 import com.equipobeta.friendzone.users.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -49,7 +50,12 @@ public class EventController {
     }
 
 
-    @PostMapping("/api/createevent")
+
+//    public String userAccess() {
+//        return "User Content.";
+//    }
+@PostMapping("/api/createevent")
+@PreAuthorize("hasRole('USER') or hasRole('ADMIN')")
     public Event addEvent(@RequestBody Event event) {
         User authUser = userService.findById(1L);
 
@@ -58,7 +64,9 @@ public class EventController {
         return eventService.createEvent(event);
     }
 
+
     @GetMapping("/api/oneevent/{id}")
+    @PreAuthorize("hasRole('USER') or hasRole('ADMIN')")
     public Event findEventById(@PathVariable Long id) {
         return eventService.findById(id);
     }

@@ -1,33 +1,47 @@
 package com.equipobeta.friendzone.users;
 
+import com.equipobeta.friendzone.auth.role.Role;
 import com.equipobeta.friendzone.events.Event;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.io.Serial;
-import java.io.Serializable;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
+
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.Set;
 
 
 @Entity
-
 @Getter
 @Setter
-
-public class User implements Serializable {
-    @Serial
-    private static final Long serialVersionUID = 1L;
-
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String name;
-    private String email;
-    private String password;
+    @NotBlank(message = "Username is required")
+    @Size(max = 20)
     private String username;
+    @NotBlank(message = "Name is required")
+    @Size(max = 20)
+    private String name;
+    @NotBlank(message = "Password is required")
+    @Size(max = 150)
+    private String password;
+    @NotBlank
+    @Size(max = 50)
+    @Email
+    private String email;
+
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(	name = "user_roles",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "role_id"))
+    private Set<Role> roles = new HashSet<>();
 
     @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JsonIgnore
@@ -44,22 +58,15 @@ public class User implements Serializable {
     private Set<Event> event;
 
     public User() {
+
     }
 
-    public User(Long id, String name, String email, String password, String username) {
-        this.id = id;
+    public User(  String username,String name,String email, String password   ) {
+        this.username = username;
         this.name = name;
         this.email = email;
         this.password = password;
-        this.username = username;
-    }
 
-    public User(String name, String email, String password, String username) {
-        this.name = name;
-        this.email = email;
-        this.password = password;
-        this.username = username;
     }
-
 
 }

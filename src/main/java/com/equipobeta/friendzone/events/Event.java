@@ -68,4 +68,7 @@ public class Event implements Serializable{
         this.image = image;
         this.hour = hour;
     }
+
+    public Event(long l, String s, String s1, String s2, String s3, String s4, String s5, String s6, String s7) {
+    }
 }

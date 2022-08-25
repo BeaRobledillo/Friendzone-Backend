@@ -43,29 +43,25 @@ en la cual puedes invitar a amigos y concretar la fecha, hora, sitio y toda la i
 - Git / Github - Git version control system.
 - Java - Programming Language.
 - JavaScript - Programming Language.
-- Spring Boot - Java programming language framework
+- Spring Boot - Java programming language framework.
 - Spring Data JPA - Simplify data persistence for the developer against different information repositories. 
+- JWT (JSON Web Token) - Security Token.
 - Spring Security -  Java / Java EE framework that provides authentication, authorization and other security features for applications.
 - MySQL - Relational database management system. 
+- TypeScript - Programming Language.
 
 # Tools :hammer:
 
 - Trello  - Project Organization. Agile Methodology. User stories.
 - Balsamiq - Wireframe.
+- Github - Git version control system.
 - Figma - Design.
 - Canva - Simplified Graphic Design.
 - XAMPP - MySQL database management system and Apache web server.
+- Postman - Tool that allows HTTP requests to be made to any API.
 - PhpMyAdmin - MySQL Administration through web pages, using a web browser.
 - Visual Studio Code - Code Editor.
 - IntelliJ IDEA - IDE (**I**ntegrated **D**evelopment **E**nvironment)
-
-Frameworks:  :books:
-- Angular - Framework for web applications developed in open source TypeScript.
-- Bootstrap - Cross-platform library or open source toolkit for web site and application design.
-
-# ScreenShoots :camera:
-
-
 
 # Authors ✒️
 
@@ -75,7 +71,6 @@ Frameworks:  :books:
 - Jesús Otero Devesa - https://github.com/jesusod
 - Ana María Adalid Meri - https://github.com/Anitameri
 - Carlos Laurie Díaz - https://github.com/CarlitosHunter
-
 
 # Friendzone-Backend
 

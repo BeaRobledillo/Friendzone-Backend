@@ -1,4 +1,4 @@
-package com.equipobeta.friendzone.auth.payload.response;
+package com.equipobeta.friendzone.auth.security.response;
 
 import lombok.Getter;
 import lombok.Setter;

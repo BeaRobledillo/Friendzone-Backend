@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.*;
 
 
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @RestController
@@ -29,21 +30,35 @@ public class EventController {
     private final UserService userService;
     private final EventService eventService;
 
+    private final EventRepository eventRepository;
+
     private final UserRepository userRepository;
 
 
 
-    public EventController(UserService userService, EventService eventService, UserRepository userRepository) {
+    public EventController(UserService userService, EventService eventService, EventRepository eventRepository, UserRepository userRepository) {
         this.userService = userService;
         this.eventService = eventService;
+        this.eventRepository = eventRepository;
         this.userRepository = userRepository;
     }
 
      //listar todos los eventos
      
+//    @GetMapping("/api/allevents")
+//    public List<Event> getall(){return eventService.getAllEvents();
+//    }
+
     @GetMapping("/api/allevents")
-    public List<Event> getall(){
-        return eventService.getAllEvents();
+    public ResponseEntity<List<Event>> getEventByOwner(Authentication authentication, HttpSession session) {
+        if (authentication == null) {
+            System.out.println("Es necesario que hagas el login");
+        }
+            UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
+            System.out.println(userDetails.getUsername());
+            User user = userRepository.getByUsername(userDetails.getUsername());
+
+        return ResponseEntity.ok().body(eventRepository.findAllByOwner(user));
     }
 
 
@@ -64,10 +79,9 @@ public class EventController {
 @PostMapping("/api/createevent")
 @PreAuthorize("hasRole('USER') or hasRole('ADMIN')")
     public ResponseEntity<?> addEvent(@RequestBody Event event, Authentication authentication) {
-//        User authUser = userService.findById(1L);
+//
         if (authentication == null) {
             System.out.println("Es necesario que hagas el login");
-            return (ResponseEntity<?>) ResponseEntity.status(HttpStatus.UNAUTHORIZED);
         }
 
         UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();

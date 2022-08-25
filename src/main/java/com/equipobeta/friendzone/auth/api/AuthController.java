@@ -2,8 +2,8 @@ package com.equipobeta.friendzone.auth.api;
 
 import com.equipobeta.friendzone.auth.payload.request.LoginRequest;
 import com.equipobeta.friendzone.auth.payload.request.SignupRequest;
-import com.equipobeta.friendzone.auth.payload.response.JwtResponse;
-import com.equipobeta.friendzone.auth.payload.response.MessageResponse;
+import com.equipobeta.friendzone.auth.security.response.JwtResponse;
+import com.equipobeta.friendzone.auth.security.response.MessageResponse;
 import com.equipobeta.friendzone.auth.role.ERole;
 import com.equipobeta.friendzone.auth.role.Role;
 import com.equipobeta.friendzone.auth.role.RoleRepository;

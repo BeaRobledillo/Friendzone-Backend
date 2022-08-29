@@ -1,4 +1,7 @@
-# FriendCity by Beta Team (Pedagogical Project) :hotel: 
+# **FriendCity** by Beta Team (Pedagogical Project) :hotel: :family:
+# :house_with_garden: :boy: :girl:
+
+![alt Friendcity](https://github.com/Anitameri/Friendzone-Frontend/blob/main/logorecorte.PNG)
 
 #### Project Idea  :bulb:
 ~
@@ -12,59 +15,65 @@ Una app para gestionar y planificar diferentes tipos de **eventos** entre grupos
 en la cual puedes invitar a amigos y concretar la fecha, hora, sitio y toda la información necesaria para planificar el evento.
 ~
 
-## Requeriments :bookmark_tabs:
+## Requeriments: :bookmark_tabs:
 
-- IntelliJ IDEA.
-- MySQL.
-- Visual Studio Code.
-- Browser.
+- **IntelliJ IDEA.**
+- **MySQL.**
+- **Visual Studio Code.**
+- **Browser.**
+
+## :octocat: Our Repositories: 
+
+[FriendCity Frontend](https://github.com/Anitameri/Friendzone-Frontend) - FriendCity Frontend
+
+[FriendCity Backend](https://github.com/Anitameri/Friendzone-Backend) - FriendCity Backend
 
 # Functionalities :floppy_disk:
 
 ## Minimum Viable Product (MVP): :heavy_minus_sign:
-- Sign up / Registrarse.
-- Log in / Loguearse.
-- Log out / Cerrar Sesión.
+- **Sign up** / Registrarse. :id:
+- **Log in** / Loguearse. :+1:
+- **Log out** / Cerrar Sesión. :no_entry: 
 - CRUD Events:
-    - Add or Create Events / Añadir o Crear Eventos.
-    - See or Read Events in a Calendar / Ver o Leer Eventos en un Calendario.
-    - Modify or Edit Events (All group members will be able to edit) / Modificar o Editar Eventos (Todos los miembros del grupo podrán editar).
-    - Delete Events (Solo el creador del evento podrá eliminar) / Eliminar Eventos (Only the creator of the event can delete).
-- Recibir invitaciones de los eventos por email / Receive event invitations by email.
+    - **Add** or **Create** Events / Añadir o Crear Eventos.
+    - **See** or **Read** Events in a Calendar / Ver o Leer Eventos en un Calendario. :date: 
+    - **Modify** or **Edit** Events (All group members will be able to edit) / Modificar o Editar Eventos (Todos los miembros del grupo podrán editar).
+    - **Delete** Events (Solo el creador del evento podrá eliminar) / Eliminar Eventos (Only the creator of the event can delete).
+- Receive event **invitations by email** / Recibir invitaciones de los eventos por email. :mailbox:
 
 # :round_pushpin: Future Extras: :heavy_plus_sign:
 
-- Make groups of friends / Hacer Grupos de amigos.
-- Password recovery button / Botón de recuperar la contraseña.
-- Add Payment Platform / Añadir Plataforma de pago.
+- Make **groups** of friends / Hacer Grupos de amigos.
+- **Password recovery** button / Botón de recuperar la contraseña. :soon: 
+- Add **Payment Platform** / Añadir Plataforma de pago. :credit_card:
 
 # 💻 Technologies
 
-- Git / Github - Git version control system.
-- Java - Programming Language.
-- JavaScript - Programming Language.
-- Spring Boot - Java programming language framework.
-- Spring Data JPA - Simplify data persistence for the developer against different information repositories. 
-- JWT (JSON Web Token) - Security Token.
-- Spring Security -  Java / Java EE framework that provides authentication, authorization and other security features for applications.
-- MySQL - Relational database management system. 
-- TypeScript - Programming Language.
+- **Git** / Github - Git version control system.
+- **Java** - Programming Language.
+- **JavaScript** - Programming Language.
+- **Spring Boot** - Java programming language framework.
+- **Spring Data JPA** - Simplify data persistence for the developer against different information repositories. 
+- **JWT (JSON Web Token)** - Security Token.
+- **Spring Security** -  Java / Java EE framework that provides authentication, authorization and other security features for applications.
+- **MySQL** - Relational database management system. 
+- **TypeScript** - Programming Language.
 
 # Tools :hammer:
 
-- Trello  - Project Organization. Agile Methodology. User stories.
-- Balsamiq - Wireframe.
-- Github - Git version control system.
-- Figma - Design.
-- Canva - Simplified Graphic Design.
-- XAMPP - MySQL database management system and Apache web server.
-- Postman - Tool that allows HTTP requests to be made to any API.
-- PhpMyAdmin - MySQL Administration through web pages, using a web browser.
-- Visual Studio Code - Code Editor.
-- IntelliJ IDEA - IDE (**I**ntegrated **D**evelopment **E**nvironment)
+- **Trello**  - Project Organization. Agile Methodology. User stories.
+- **Balsamiq** - Wireframe.
+- **Github** - Git version control system.
+- **Figma** - Design.
+- **Canva** - Simplified Graphic Design.
+- **XAMPP** - MySQL database management system and Apache web server.
+- **Postman** - Tool that allows HTTP requests to be made to any API.
+- **PhpMyAdmin** - MySQL Administration through web pages, using a web browser.
+- **Visual Studio Code** - Code Editor.
+- **IntelliJ IDEA** - IDE (**I**ntegrated **D**evelopment **E**nvironment)
 
 
-# See all the events in the list :balloon:
+# See **all the events** in the list :balloon:
 Request 
 > GET localhost:8080/api/allevents
 
@@ -167,16 +176,26 @@ Request
         }
     }
 ]
+
+```
+# **Add Event** :infinity:
+Adds a new event to the event repository.
+> Request POST http://localhost:8080/api/createevent
+
+# :arrow_up: **Update/Edit Event**
+ Updates the data of a event.
+ > Request PUT http://localhost:8080/api/update/
+ 
 # Authors ✒️
 
-- Miguel Ángel Íñiguez Pérez - https://github.com/maip202
-- Bea Robledillo Gómez - https://github.com/BeitxuelaWEB
-- Pablo Ruíz Cascón - https://github.com/pruizcas
-- Jesús Otero Devesa - https://github.com/jesusod
-- Ana María Adalid Meri - https://github.com/Anitameri
-- Carlos Laurie Díaz - https://github.com/CarlitosHunter
+- **Miguel** Ángel Íñiguez Pérez - https://github.com/maip202
+- **Bea** Robledillo Gómez - https://github.com/BeitxuelaWEB
+- **Pablo** Ruíz Cascón - https://github.com/pruizcas
+- **Jesús** Otero Devesa - https://github.com/jesusod
+- **Ana** María Adalid Meri - https://github.com/Anitameri
+- **Carlos** Laurie Díaz - https://github.com/CarlitosHunter
 
-# Friendzone-Backend
+# Friendzone/FriendCity-Backend
 
 # Greetings :gift:
 - Comment your friends and colleagues about this project. :loudspeaker:

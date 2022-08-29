@@ -63,6 +63,110 @@ en la cual puedes invitar a amigos y concretar la fecha, hora, sitio y toda la i
 - Visual Studio Code - Code Editor.
 - IntelliJ IDEA - IDE (**I**ntegrated **D**evelopment **E**nvironment)
 
+
+# See all the events in the list :balloon:
+Request 
+> GET localhost:8080/api/allevents
+
+```
+[
+    {
+    "id": 7,
+        "name": "Mariscada entre amigos",
+        "event_date": "2022-09-04",
+        "hour": "21:00:00",
+        "location": "Restaurante Galego",
+        "budget": 35.0,
+        "description": "Mariscada galega y Cerveza Estrella Galizia. Pecador diodenoo condemor hasta luego Lucas ahorarr pupita no te digo trigo por no llamarte Rodrigor. Diodenoo fistro de la pradera ese hombree me cago en tus muelas papaar papaar a peich caballo blanco caballo",
+        "image": "https://images.unsplash.com/photo-1606850780554-b55ea4dd0b70?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+        "members": [],
+        "owner": {
+            "id": 2,
+            "username": "Otro",
+            "name": "OtroUsuario",
+            "password": "$2a$10$cqi7SURR5E.4ebH.sd/Uyuj.TXtNv.HBsZSlve5L8MuWEiT7w9Iji",
+            "email": "otrapersona@gmail.com",
+            "roles": [
+                {
+                    "id": 1,
+                    "name": "ROLE_USER"
+                }
+            ]
+        }
+    },
+    {
+        "id": 8,
+        "name": "Aprender a hacer sushi rico",
+        "event_date": "2022-10-08",
+        "hour": "14:00:00",
+        "location": "Spain",
+        "budget": 10.0,
+        "description": "Clases de cocina, aprenderemos a hacer sushi.  Torpedo diodenoo benemeritaar me cago en tus muelas va usté muy cargadoo no te digo trigo por no llamarte Rodrigor caballo blanco caballo negroorl de la pradera",
+        "image": "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+        "members": [],
+        "owner": {
+            "id": 2,
+            "username": "Otro",
+            "name": "OtroUsuario",
+            "password": "$2a$10$cqi7SURR5E.4ebH.sd/Uyuj.TXtNv.HBsZSlve5L8MuWEiT7w9Iji",
+            "email": "otrapersona@gmail.com",
+            "roles": [
+                {
+                    "id": 1,
+                    "name": "ROLE_USER"
+                }
+            ]
+        }
+    },
+    {
+        "id": 9,
+        "name": "En el río con amigos",
+        "event_date": "2022-09-03",
+        "hour": "10:00:00",
+        "location": "Madrid, Spain",
+        "budget": 5.0,
+        "description": "Lorem fistrum llevame al sircoo diodenoo adipisicing cillum te voy a borrar el cerito qui está la cosa muy malar eiusmod. A wan ahorarr cillum ut velit tempor papaar papaar. Apetecan aliqua dolor esse.",
+        "image": "https://images.unsplash.com/photo-1528732262645-b06fa3a79c9e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
+        "members": [],
+        "owner": {
+            "id": 2,
+            "username": "Otro",
+            "name": "OtroUsuario",
+            "password": "$2a$10$cqi7SURR5E.4ebH.sd/Uyuj.TXtNv.HBsZSlve5L8MuWEiT7w9Iji",
+            "email": "otrapersona@gmail.com",
+            "roles": [
+                {
+                    "id": 1,
+                    "name": "ROLE_USER"
+                }
+            ]
+        }
+    },
+    {
+        "id": 10,
+        "name": "Paseo por el bosque para buscar setas",
+        "event_date": "2022-09-11",
+        "hour": "10:00:00",
+        "location": "28410 Manzanares el Real, Madrid, Spain",
+        "budget": 5.0,
+        "description": "Elit quis me cago en tus muelas ese que llega. Al ataquerl qui está la cosa muy malar a wan ullamco la caidita. Ex de la pradera ex voluptate aute pecador a wan. Te va a hasé pupitaa de la pradera ",
+        "image": "https://images.unsplash.com/photo-1505820013142-f86a3439c5b2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
+        "members": [],
+        "owner": {
+            "id": 2,
+            "username": "Otro",
+            "name": "OtroUsuario",
+            "password": "$2a$10$cqi7SURR5E.4ebH.sd/Uyuj.TXtNv.HBsZSlve5L8MuWEiT7w9Iji",
+            "email": "otrapersona@gmail.com",
+            "roles": [
+                {
+                    "id": 1,
+                    "name": "ROLE_USER"
+                }
+            ]
+        }
+    }
+]
 # Authors ✒️
 
 - Miguel Ángel Íñiguez Pérez - https://github.com/maip202

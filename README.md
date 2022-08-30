@@ -269,7 +269,7 @@ localhost:8080/api/createevent
  # **Delete one event** in the list :scissors:
 Request 
 
-> POST 
+> DELETE 
 
 localhost:8080/api/delete/{id}
 
@@ -309,6 +309,17 @@ localhost:8080/api/oneevent/{id}
 - **Jesús** Otero Devesa - https://github.com/jesusod
 - **Ana** María Adalid Meri - https://github.com/Anitameri
 - **Carlos** Laurie Díaz - https://github.com/CarlitosHunter
+
+
+# License :copyright:
+
+⚠️ This project is licensed under creative commons 
+
+[FriendCity License Frontend](https://github.com/Anitameri/Friendzone-Frontend/blob/main/LICENSE.md)
+
+[FriendCity License Backend](https://github.com/Anitameri/Friendzone-Backend/blob/main/LICENSE.md) 
+
+=======
 
 # Friendzone/FriendCity-Backend
 

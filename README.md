@@ -17,9 +17,9 @@ en la cual puedes invitar a amigos y concretar la fecha, hora, sitio y toda la i
 
 ## Requeriments: :bookmark_tabs:
 
-- **IntelliJ IDEA.**
-- **MySQL.**
-- **Visual Studio Code.**
+- **IntelliJ IDEA.** -- https://www.jetbrains.com/idea 
+- **MySQL.** --  https://www.mysql.com 
+- **Visual Studio Code.** -- https://code.visualstudio.com
 - **Browser.**
 
 ## :octocat: Our Repositories: 
@@ -78,8 +78,18 @@ en la cual puedes invitar a amigos y concretar la fecha, hora, sitio y toda la i
 
 <summary>Click to see API :eyes:</summary>
  
- Access is only possible if you are logged in
  
+ ## :no_entry_sign: Access is only possible if you are logged in:
+
+ ```
+ {
+    "path": "/api/createevent",
+    "error": "Unauthorized",
+    "message": "Full authentication is required to access this resource",
+    "status": 401
+}
+ 
+ ```
  
  # **Signin**  :eyeglasses:
  
@@ -260,6 +270,25 @@ Request
 localhost:8080/api/oneevent/{id}
 
  </details>
+ 
+ # :hammer: Resources
+ 
+ Visit https://www.java.com/es - Java
+ 
+ Visit https://spring.io - SpringBoot
+ 
+ Visit https://spring.io/projects/spring-security - Spring Security
+ 
+ Visit https://jwt.io - JWT (JSON Web Token)
+ 
+ Visit https://spring.io/projects/spring-data-jpa - Spring Data JPA
+ 
+ Visit https://www.apachefriends.org/download.html - XAMPP
+ 
+ Visit https://www.mysql.com - MySQL
+ 
+ Visit https://www.oracle.com/java/technologies/javamail-api.html - Java Mail API
+ 
  
 # Authors ✒️
 

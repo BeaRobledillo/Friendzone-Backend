@@ -23,11 +23,10 @@ class UserServiceTest {
     void findById() {
         //When
         User user = new User(
-                1L,
                 "Bea",
+                "BeaBootcamp",
                 "bea@gmail.com",
-                "123456",
-                "BeaBootcamp"
+                "123456"
         );
         //Then
         userRepository.findById(1L);

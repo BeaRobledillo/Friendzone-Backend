@@ -22,6 +22,17 @@ en la cual puedes invitar a amigos y concretar la fecha, hora, sitio y toda la i
 - **Visual Studio Code.** -- https://code.visualstudio.com
 - **Browser.**
 
+### Installing Java
+* Windows - https://www.youtube.com/watch?v=I0SBRWVS0ok
+
+* Linux - https://www.youtube.com/watch?v=mHvFpyHK97A
+
+* Mac - https://www.youtube.com/watch?v=U3kTdMPlgsY
+
+### Troubleshooting
+
+Troubleshooting Java Installation - https://www.youtube.com/watch?v=UI_PabQ1YB0
+
 ## :octocat: Our Repositories: 
 
 [FriendCity Frontend](https://github.com/Anitameri/Friendzone-Frontend) - FriendCity Frontend

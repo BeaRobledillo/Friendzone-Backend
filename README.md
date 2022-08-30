@@ -72,10 +72,59 @@ en la cual puedes invitar a amigos y concretar la fecha, hora, sitio y toda la i
 - **Visual Studio Code** - Code Editor.
 - **IntelliJ IDEA** - IDE (**I**ntegrated **D**evelopment **E**nvironment)
 
+# API REST :balloon:
 
-# See **all the events** in the list :balloon:
+<details>
+
+<summary>Click to see API :eyes:</summary>
+ 
+ Access is only possible if you are logged in
+ 
+ 
+ # **Signin**  :eyeglasses:
+ 
 Request 
-> GET localhost:8080/api/allevents
+
+> POST 
+
+localhost:8080/api/auth/signin 
+
+```
+
+{
+    "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJPdHJvIiwiaWF0IjoxNjYxODQzNzIwLCJleHAiOjE2NjE5MzAxMjB9.AdEUzqGkPGdAWWwjnHqGwNt5MzTQnXNpJxmH_d6TtRuSpfyOsO4bs9xwmurZG1TL410g3SZbn-I5ya11B14hjQ",
+    "type": "Bearer",
+    "id": 2,
+    "username": "Otro",
+    "email": "otrapersona@gmail.com",
+    "name": "OtroUsuario",
+    "roles": [
+        "ROLE_USER"
+    ]
+}
+
+```
+ # **Signup**  :sunglasses:
+ 
+ Request
+ 
+ > POST 
+ 
+localhost:8080/api/auth/signup :eyeglasses:
+
+```
+{
+    "message": "User registered successfully!"
+}
+
+```
+
+# See **all the events** in the list :paperclip:
+Request 
+
+> GET 
+
+localhost:8080/api/allevents
 
 ```
 [
@@ -180,11 +229,37 @@ Request
 ```
 # **Add Event** :infinity:
 Adds a new event to the event repository.
-> Request POST http://localhost:8080/api/createevent
+Request 
+
+ >POST
+ 
+localhost:8080/api/createevent
 
 # :arrow_up: **Update/Edit Event**
  Updates the data of a event.
- > Request PUT http://localhost:8080/api/update/
+ 
+ Request 
+ 
+  >PUT 
+ 
+ localhost:8080/api/update/
+ 
+ 
+ # **Delete one event** in the list :scissors:
+Request 
+
+> POST 
+
+localhost:8080/api/delete/{id}
+
+# See **One event** :balloon:
+Request 
+
+> GET 
+
+localhost:8080/api/oneevent/{id}
+
+ </details>
  
 # Authors ✒️
 

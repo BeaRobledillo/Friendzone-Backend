@@ -3,7 +3,7 @@
 
 ![alt Friendcity](https://github.com/Anitameri/Friendzone-Frontend/blob/main/src/assets/img/Blue%20Mount%20Town%20Logo%20Design%201.png)
 
-#### Project Idea: :bulb:
+## Project Idea: :bulb:
 ~
 
 An app to manage and plan different types of **events** between groups of **friends** (birthdays, meetings, get-togethers, etc...),
@@ -12,7 +12,7 @@ An app to manage and plan different types of **events** between groups of **frie
 in which you can invite friends and specify the date, time, place and all the necessary information to plan the event.
 ~
 
-#### Idea de Proyecto:  :bulb:
+## Idea de Proyecto:  :bulb:
 ~
 
 Una app para gestionar y planificar diferentes tipos de **eventos** entre grupos de **amigos** (cumpleaños, reuniones, quedadas, etc…), 

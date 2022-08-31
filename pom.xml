@@ -6,7 +6,7 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.7.1</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <relativePath/> 
     </parent>
     <groupId>com.equipobeta</groupId>
     <artifactId>Friendzone</artifactId>
@@ -76,9 +76,9 @@
             <artifactId>junit-jupiter</artifactId>
         </dependency>
         <dependency>
-        <groupId>io.jsonwebtoken</groupId>
-        <artifactId>jjwt</artifactId>
-        <version>0.9.1</version>
+          <groupId>io.jsonwebtoken</groupId>
+          <artifactId>jjwt</artifactId>
+          <version>0.9.1</version>
         </dependency>
         <dependency>
             <groupId>jakarta.validation</groupId>
@@ -97,6 +97,8 @@
         </dependency>
     </dependencies>
 
+
+    </dependencies>
     <build>
         <plugins>
             <plugin>

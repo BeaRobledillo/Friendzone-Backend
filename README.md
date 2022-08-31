@@ -5,20 +5,27 @@
 
 #### Project Idea  :bulb:
 ~
+
 An app to manage and plan different types of **events** between groups of **friends** (birthdays, meetings, get-togethers, etc...),
+ 
+
 in which you can invite friends and specify the date, time, place and all the necessary information to plan the event.
 ~
 
 #### Idea de Proyecto  :bulb:
 ~
-Una app para gestionar y planificar diferentes tipos de **eventos** entre grupos de **amigos** (cumpleaños, reuniones, quedadas, etc…),
+
+Una app para gestionar y planificar diferentes tipos de **eventos** entre grupos de **amigos** (cumpleaños, reuniones, quedadas, etc…), 
+
 en la cual puedes invitar a amigos y concretar la fecha, hora, sitio y toda la información necesaria para planificar el evento.
 ~
 
 ## Requeriments: :bookmark_tabs:
 
-- **IntelliJ IDEA.** -- https://www.jetbrains.com/idea
-- **MySQL.** --  https://www.mysql.com
+
+- **IntelliJ IDEA.** -- https://www.jetbrains.com/idea 
+- **MySQL.** --  https://www.mysql.com 
+
 - **Visual Studio Code.** -- https://code.visualstudio.com
 - **Browser.**
 
@@ -44,10 +51,12 @@ Troubleshooting Java Installation - https://www.youtube.com/watch?v=UI_PabQ1YB0
 ## Minimum Viable Product (MVP): :heavy_minus_sign:
 - **Sign up** / Registrarse. :id:
 - **Log in** / Loguearse. :+1:
+
 - **Log out** / Cerrar Sesión. :no_entry:
 - CRUD Events:
     - **Add** or **Create** Events / Añadir o Crear Eventos.
     - **See** or **Read** Events in a Calendar / Ver o Leer Eventos en un Calendario. :date:
+
     - **Modify** or **Edit** Events (All group members will be able to edit) / Modificar o Editar Eventos (Todos los miembros del grupo podrán editar).
     - **Delete** Events (Solo el creador del evento podrá eliminar) / Eliminar Eventos (Only the creator of the event can delete).
 - Receive event **invitations by email** / Recibir invitaciones de los eventos por email. :mailbox:
@@ -55,7 +64,9 @@ Troubleshooting Java Installation - https://www.youtube.com/watch?v=UI_PabQ1YB0
 # :round_pushpin: Future Extras: :heavy_plus_sign:
 
 - Make **groups** of friends / Hacer Grupos de amigos.
-- **Password recovery** button / Botón de recuperar la contraseña. :soon:
+
+- **Password recovery** button / Botón de recuperar la contraseña. :soon: 
+
 - Add **Payment Platform** / Añadir Plataforma de pago. :credit_card:
 
 # 💻 Technologies
@@ -64,10 +75,12 @@ Troubleshooting Java Installation - https://www.youtube.com/watch?v=UI_PabQ1YB0
 - **Java** - Programming Language.
 - **JavaScript** - Programming Language.
 - **Spring Boot** - Java programming language framework.
+
 - **Spring Data JPA** - Simplify data persistence for the developer against different information repositories.
 - **JWT (JSON Web Token)** - Security Token.
 - **Spring Security** -  Java / Java EE framework that provides authentication, authorization and other security features for applications.
 - **MySQL** - Relational database management system.
+
 - **TypeScript** - Programming Language.
 
 # Tools :hammer:
@@ -90,7 +103,9 @@ Troubleshooting Java Installation - https://www.youtube.com/watch?v=UI_PabQ1YB0
 <summary>Click to see API :eyes:</summary>
 
 
+
 ## :no_entry_sign: Access is only possible if you are logged in:
+
 
  ```
  {
@@ -102,6 +117,7 @@ Troubleshooting Java Installation - https://www.youtube.com/watch?v=UI_PabQ1YB0
  
  ```
 
+
 # **Signin**  :eyeglasses:
 
 Request
@@ -109,6 +125,7 @@ Request
 > POST
 
 localhost:8080/api/auth/signin
+
 
 ```
 
@@ -125,11 +142,13 @@ localhost:8080/api/auth/signin
 }
 
 ```
+
 # **Signup**  :sunglasses:
 
 Request
 
 > POST
+
 
 localhost:8080/api/auth/signup :eyeglasses:
 
@@ -141,9 +160,11 @@ localhost:8080/api/auth/signup :eyeglasses:
 ```
 
 # See **all the events** in the list :paperclip:
+
 Request
 
 > GET
+
 
 localhost:8080/api/allevents
 
@@ -250,6 +271,7 @@ localhost:8080/api/allevents
 ```
 # **Add Event** :infinity:
 Adds a new event to the event repository.
+
 Request
 
 >POST
@@ -271,9 +293,11 @@ Request
 
 > DELETE
 
+
 localhost:8080/api/delete/{id}
 
 # See **One event** :balloon:
+
 Request
 
 > GET
@@ -330,6 +354,7 @@ Visit https://www.oracle.com/java/technologies/javamail-api.html - Java Mail API
 Visit https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-mail  - Springboot starter mail
 
 
+
 # Authors ✒️
 
 - **Miguel** Ángel Íñiguez Pérez - https://github.com/maip202
@@ -342,11 +367,13 @@ Visit https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-st
 
 # License :copyright:
 
+
 ⚠️ This project is licensed under creative commons
 
 [FriendCity License Frontend](https://github.com/Anitameri/Friendzone-Frontend/blob/main/LICENSE.md)
 
 [FriendCity License Backend](https://github.com/Anitameri/Friendzone-Backend/blob/main/LICENSE.md)
+
 
 =======
 

@@ -327,6 +327,8 @@ Visit https://www.mysql.com - MySQL
 
 Visit https://www.oracle.com/java/technologies/javamail-api.html - Java Mail API
 
+Visit https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-mail  - Springboot starter mail
+
 
 # Authors ✒️
 

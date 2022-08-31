@@ -21,10 +21,4 @@ public class TestController {
         return "Contenido user";
     }
 
-//    @GetMapping("/admin")
-//    @PreAuthorize("hasRole('ADMIN')")
-//    public String admin() {
-//        return "Contenido admin";
-//    }
-
 }

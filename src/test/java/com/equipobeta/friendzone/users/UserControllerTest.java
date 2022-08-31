@@ -34,27 +34,4 @@ public class UserControllerTest {
         this.userRepository = userRepository;
 
     }
-
-//    @BeforeEach
-//      void findById() {
-//        userRepository.deleteAll();
-//    }
-//
-//    @Test
-//    void findById() throws Exception {
-//        User user = userRepository.save(new User(
-//                1L,
-//                "Bea",
-//                "bea@gmail.com",
-//                "123456",
-//                "BeaBootcamp"
-//        ));
-//        mockMvc.perform(get("/user/"+user.getId()))
-//                .andExpect(status().isOk())
-//                .andExpect(jsonPath("$.id", equalTo(1L)))
-//                .andExpect(jsonPath("$.name", equalTo("Bea")))
-//                .andExpect(jsonPath("$.email", equalTo("bea@gmail.com")))
-//                .andExpect(jsonPath("$.password", equalTo("123456")))
-//                .andExpect(jsonPath("$.username", equalTo("BeaBootcamp")));
-//    }
 }

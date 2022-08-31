@@ -43,12 +43,6 @@ public class EventController {
         this.userRepository = userRepository;
     }
 
-     //listar todos los eventos
-     
-//    @GetMapping("/api/allevents")
-//    public List<Event> getall(){return eventService.getAllEvents();
-//    }
-
     @GetMapping("/api/allevents")
     public ResponseEntity<List<Event>> getEventByOwner(Authentication authentication, HttpSession session) {
         if (authentication == null) {
@@ -61,9 +55,6 @@ public class EventController {
         return ResponseEntity.ok().body(eventRepository.findAllByOwner(user));
     }
 
-
-    //borrar un evento por id
-
     @DeleteMapping("/api/delete/{id}")
     public Long delete(@PathVariable("id") Long id) {
         Event event = eventService.findById(id);
@@ -71,11 +62,6 @@ public class EventController {
         return id;
     }
 
-
-
-//    public String userAccess() {
-//        return "User Content.";
-//    }
 @PostMapping("/api/createevent")
 @PreAuthorize("hasRole('USER') or hasRole('ADMIN')")
     public ResponseEntity<?> addEvent(@RequestBody Event event, Authentication authentication) {

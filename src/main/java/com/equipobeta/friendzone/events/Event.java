@@ -44,14 +44,8 @@ public class Event implements Serializable{
     Set<User> members;
 
     @ManyToOne
-    @JoinColumn(name="owner_id, nulleable=false")
+    @JoinColumn(name="owner_id, nullable=false")
     private User owner;
-
-
-//    @ManyToOne
-//    @JoinColumn(name="user_id, nulleable=false")
-//    private User owner;
-
 
     public Event(){
 

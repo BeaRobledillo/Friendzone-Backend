@@ -12,6 +12,7 @@ import java.sql.Date;
 import java.sql.Time;
 import java.text.DateFormat;
 import java.util.Collection;
+import java.util.Set;
 
 @Entity
 
@@ -36,12 +37,20 @@ public class Event implements Serializable{
     private String description;
     private String image;
 
-    @ManyToMany(mappedBy = "events")
-    private Collection <User> members;
+//    @ManyToMany(mappedBy = "events")
+//    private Collection <User> members;
+
+    @ManyToMany(mappedBy = "eventMembers")
+    Set<User> members;
 
     @ManyToOne
-    @JoinColumn(name="user_id, nulleable=false")
+    @JoinColumn(name="owner_id, nulleable=false")
     private User owner;
+
+
+//    @ManyToOne
+//    @JoinColumn(name="user_id, nulleable=false")
+//    private User owner;
 
 
     public Event(){

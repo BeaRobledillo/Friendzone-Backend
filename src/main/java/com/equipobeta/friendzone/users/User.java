@@ -46,16 +46,17 @@ public class User {
     @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JsonIgnore
     @JoinTable(
-            name = "owner",
+            name = "event_members",
             joinColumns = @JoinColumn(
                     name = "user_id"),
             inverseJoinColumns = @JoinColumn(
                     name = "event_id"))
-    private Collection <Event> events;
+    private Set <Event> eventMembers;
 
     @OneToMany(mappedBy = "owner")
     @JsonIgnore
-    private Set<Event> event;
+    private Set<Event> events;
+
 
     public User() {
 

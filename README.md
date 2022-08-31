@@ -278,8 +278,35 @@ Request
 
 > GET
 
-localhost:8080/api/oneevent/{id}
+localhost:8080/api/oneevent/{id} -> 
 
+```
+    {
+    "id": 4,
+    "name": "Concierto",
+    "event_date": "2022-09-10",
+    "hour": "20:00:00",
+    "location": "Madriz",
+    "budget": 20.0,
+    "description": "Conciertazo del Evaristo. Por la gloria de mi madre ese hombree al ataquerl condemor a gramenawer condemor al ataquerl te voy a borrar el cerito. ",
+    "image": "https://th.bing.com/th/id/OIP.zE-kNqn36TtePMyms_1RswHaE7?pid=ImgDet&rs=1",
+    "members": [],
+    "owner": {
+        "id": 2,
+        "username": "Bea",
+        "name": "Bea",
+        "password": "$2a$10$1UyuPrq7thZ/Lggcad8zcu0cU1A6AliTrGaHwQNKiy5.EkTUMjVIu",
+        "email": "Bea@gmail.com",
+        "roles": [
+            {
+                "id": 1,
+                "name": "ROLE_USER"
+            }
+        ]
+    }
+}
+
+```
  </details>
 
 # :hammer: Resources
